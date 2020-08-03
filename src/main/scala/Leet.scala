@@ -136,14 +136,13 @@ class Leet {
   def leet1306_canReach(arr: Array[Int], start: Int): Boolean = {
     val frontier = new scala.collection.mutable.Queue[Int]
     var seen = new scala.collection.mutable.HashSet[Int]
-    var idx_zeros = new scala.collection.mutable.HashSet[Int]
     frontier.enqueue(start)
     while (!frontier.isEmpty) {
       val node = frontier.dequeue()
       if (!seen.contains(node)) {
         seen.add(node)
         if (arr(node) == 0) {
-          idx_zeros.add(node)
+          return true
         } else {
           val new_1 = node - arr(node)
           val new_2 = node + arr(node)
@@ -156,6 +155,6 @@ class Leet {
         }
       }
     }
-    !idx_zeros.isEmpty
+    false
   }
 }
