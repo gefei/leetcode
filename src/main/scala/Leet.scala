@@ -149,7 +149,7 @@ class Leet {
     for (i <- 1 until nums.length) {
       steps(i) = Int.MaxValue
     }
-    for (i <- 0 until nums.length) {
+    for (i <- nums.indices) {
       for (j <- i+1 until nums.length.min(i+nums(i) + 1)) {
         steps(j) = steps(j).min(steps(i) + 1)
       }
@@ -166,7 +166,7 @@ class Leet {
     for (i <- 1 until nums.length) {
       steps(i) = false
     }
-    for (i <- 0 until nums.length) {
+    for (i <- nums.indices) {
       if (!steps(i)) return false
       for (j <- i+1 until nums.length.min(i+nums(i) + 1)) {
         steps(j) = true
@@ -181,7 +181,7 @@ class Leet {
     val frontier = new scala.collection.mutable.Queue[Int]
     var seen = new scala.collection.mutable.HashSet[Int]
     frontier.enqueue(start)
-    while (!frontier.isEmpty) {
+    while (frontier.nonEmpty) {
       val node = frontier.dequeue()
       if (!seen.contains(node)) {
         seen.add(node)
