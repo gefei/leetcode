@@ -1,5 +1,5 @@
 class Leet {
-  def leet001_twoSum(nums: Array[Int], target: Int): Array[Int] = {
+  def leet0001_twoSum(nums: Array[Int], target: Int): Array[Int] = {
     val len = nums.length
     for (i <- Range(0, len)) {
       for (j <- Range(i + 1, len))
@@ -8,7 +8,7 @@ class Leet {
     Array(-1, -1)
   }
 
-  def leet002_addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
+  def leet0002_addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
     val head = new ListNode()
     var carry = 0
     var p = head
@@ -47,7 +47,7 @@ class Leet {
   }
 
   // brute force
-  def leet003_lengthOfLongestSubstring(s: String): Int = {
+  def leet0003_lengthOfLongestSubstring(s: String): Int = {
      var maxLen = 0
      for (i <- Range(0, s.length)) {
        var j = i + 1
@@ -62,7 +62,7 @@ class Leet {
 
   // brute force
   // extending from center
-  def leet004_longestPalindrome(s: String): String = {
+  def leet0004_longestPalindrome(s: String): String = {
     if (s.length == 0) return ""
     var start = -1
     var end = -1
@@ -96,9 +96,53 @@ class Leet {
     s.substring(start, end+1)
   }
 
+  // https://leetcode.com/problems/integer-to-roman/
+  def leet0012_intToRoman(num: Int): String = {
+    val mille = num / 1000
+    val mille_s = (for (i <- 1 to mille) yield "M").mkString
+    val hundred = (num - 1000 * mille) / 100
+    val hundred_s = (for (i <- 1 to hundred) yield "C").mkString
+    val ten = (num - 1000 * mille - 100 * hundred) / 10
+    val ten_s = (for (i <- 1 to ten) yield "X").mkString
+    val one = num - 1000 * mille - 100 * hundred - 10 * ten
+    val one_s = (for (i <- 1 to one) yield "I").mkString
+
+     mille_s.concat(hundred_s).concat(ten_s).concat(one_s)
+             .replaceFirst("CCCCC", "D")
+             .replaceFirst("XXXXX", "L")
+             .replaceFirst("IIIII", "V")
+             .replaceFirst("DCCCC", "CM")
+             .replaceFirst("CCCC",  "CD")
+             .replaceFirst("LXXXX", "XC")
+             .replaceFirst("XXXX",  "XL")
+             .replaceFirst("VIIII", "IX")
+             .replaceFirst("IIII",  "IV")
+  }
+
+  // https://leetcode.com/problems/roman-to-integer/
+  def leet0013_romanToInt(s: String): Int = {
+    val canonical =
+      s.replaceAll("IV", "IIII")
+       .replaceAll("IX", "IIIIIIIII")
+       .replaceAll("XL", "XXXX")
+       .replaceAll("XC", "XXXXXXXXX")
+       .replaceAll("CD", "CCCC")
+       .replaceAll("CM", "CCCCCCCCC")
+    val letterToNum = Map(
+      'I' -> 1,
+      'V' -> 5,
+      'X' -> 10,
+      'L' -> 50,
+      'C' -> 100,
+      'D' -> 500,
+      'M' -> 1000
+    )
+    canonical.map(c => letterToNum(c)).sum
+  }
+
   // https://leetcode.com/problems/jump-game-ii/
   // dynamic programming
-  def leet045_jump(nums: Array[Int]): Int = {
+  def leet0045_jump(nums: Array[Int]): Int = {
     val steps = new Array[Int](nums.length)
     steps(0) = 0
 
@@ -115,7 +159,7 @@ class Leet {
 
   // https://leetcode.com/problems/jump-game/
   // dynamic programming
-  def leet055_canJump(nums: Array[Int]): Boolean = {
+  def leet0055_canJump(nums: Array[Int]): Boolean = {
     val steps = new Array[Boolean](nums.length)
     steps(0) = true
 
