@@ -1,9 +1,11 @@
+import scala.collection.mutable.ArrayDeque
+
 class Leet0329 {
-  def getPosition(n: Int, matrix: Array[Array[Int]]): java.util.ArrayList[(Int, Int)] = {
-    var ret = new java.util.ArrayList[(Int, Int)]()
+  def getPosition(n: Int, matrix: Array[Array[Int]]): ArrayDeque[(Int, Int)] = {
+    var ret = new ArrayDeque[(Int, Int)]()
     for (i <- matrix.indices) {
       for (j <- matrix(i).indices) {
-        if (matrix(i)(j) == n) ret.add((i, j))
+        if (matrix(i)(j) == n) ret.addOne((i, j))
       }
     }
     return ret
@@ -23,8 +25,7 @@ class Leet0329 {
     val allNums = matrix.flatten.toSet.toList.sorted
     for (n <- allNums) {
       val allPos =  getPosition(n, matrix)
-      for (i <- 0 until allPos.size()) {
-        val (y, x) = allPos.get(i)
+      for ((y, x) <- allPos) {
         finalizeOne(y, x, matrix, len)
       }
     }
