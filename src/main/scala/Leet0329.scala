@@ -18,10 +18,6 @@ class Leet0329 {
         len(i)(j) = 1
       }
     }
-    //println(matrix.map(x => x.mkString(" ")).mkString("\n"))
-    // val minValues = matrix.map(row => row.min)
-    // if (minValues.isEmpty) return 0
-    // val min = minValues.min
     val allNums = matrix.flatten.toSet.toList.sorted
     for (n <- allNums) {
       val allPos =  getPosition(n, matrix)
