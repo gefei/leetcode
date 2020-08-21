@@ -1,1 +1,7 @@
 0019: stack
+
+0174: DP
+
+0329: Dijkstra
+
+1306: Graph, BFS

@@ -178,7 +178,7 @@ class Leet {
   
 
   // https://leetcode.com/problems/jump-game-iii/
-  // width first search
+  // breadth first search
   def leet1306_canReach(arr: Array[Int], start: Int): Boolean = {
     val frontier = new scala.collection.mutable.Queue[Int]
     var seen = new scala.collection.mutable.HashSet[Int]
