@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/number-of-islands/
 
-// Memory OVERFLOW !!? Why ??
 class Leet0200 {
   def numIslands(grid: Array[Array[Char]]): Int = {
     val pos = getPosition(grid)
