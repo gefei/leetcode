@@ -1,8 +1,12 @@
 0019: stack
 
+
 0062: DP
+0063: DP
 0064: DP
 0174: DP
+
+0200: BFS
 
 0329: Dijkstra
 
