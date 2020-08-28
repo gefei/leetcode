@@ -13,4 +13,5 @@
 
 0365: BFS https://www.youtube.com/watch?v=BVtQNK_ZUJg
 
+1254: DFS
 1306: Graph, BFS
