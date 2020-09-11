@@ -1,3 +1,7 @@
+0043 https://leetcode.com/problems/multiply-strings/: string manipulation
+0195: Beginner, File IO (shell), Pipe
+0231: Beginner binary operation
+
 0019: stack
 
 
@@ -7,6 +11,7 @@
 0174: DP
 
 0200: BFS
+0212: Trie
 0240: BFS
 
 0329: Dijkstra
