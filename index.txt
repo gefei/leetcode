@@ -1,3 +1,6 @@
+554,
+576
+
 0043 https://leetcode.com/problems/multiply-strings/: string manipulation
 0195: Beginner, File IO (shell), Pipe
 0231: Beginner binary operation
@@ -10,9 +13,11 @@
 0064: DP
 0174: DP
 
+0045: BFS
 0200: BFS
-0212: Trie
 0240: BFS
+
+0212: Trie?
 
 0329: Dijkstra
 
