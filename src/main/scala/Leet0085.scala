@@ -59,10 +59,9 @@ class Leet0085 {
     for (leftIdx <- matrix(0).indices) {
       val leftCol = getColumn(matrix, leftIdx)
       var curSections = getColSections(leftCol)
-      if (curSections.nonEmpty) maxAreaToThisCol = curSections.map(x => (x._2-x._1+1)).max.max(maxAreaToThisCol)
-      for (rightIdx <- leftIdx+1 until matrix(0).length) {
-        var rightCol = getColumn(matrix, rightIdx)
-        var rightSections = getColSections(rightCol)
+      for (rightIdx <- leftIdx until matrix(0).length) {
+        val rightCol = getColumn(matrix, rightIdx)
+        val rightSections = getColSections(rightCol)
         curSections = getInteractions(curSections, rightSections)
         if (curSections.nonEmpty) {
           val areas = curSections.map(x => (x._2-x._1+1) * (rightIdx - leftIdx + 1))
@@ -134,27 +133,6 @@ object Leet0085 {
       Array('0','1','1','0','1','1','1','1','1','1','1','0','0','1','1','1','1','1','0','0','1','0','1','1','1','1','1','0','1','1','1','0','1','1','0','1','1','1','0','1')
     )
     leet.printArray(x)
-    /*
-    println(leet.getColumn(x, 0).mkString)
-    println(leet.getColumn(x, 1).mkString)
-    println(leet.getColumn(x, 2).mkString)
-    val a = leet.getColSections(leet.getColumn(x, 0))
-    val b = leet.getColSections(leet.getColumn(x, 1))
-    val c = leet.getColSections(leet.getColumn(x, 2))
-    val d = leet.getColSections(leet.getColumn(x, 3))
-    println(a)
-    println(b)
-    println(c)
-    println()
-    println(leet.getInteractions(a, a))
-    println(leet.getInteractions(a, b))
-    println(leet.getInteractions(b, a))
-    println(leet.getInteractions(a, c))
-    println(leet.getInteractions(c, a))
-    println(leet.getInteractions(a, d))
-    println(leet.getInteractions(d, a))
-    println()
-     */
     println(leet.maximalRectangle(matrix = x))
   }
 

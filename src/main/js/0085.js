@@ -160,7 +160,6 @@ function max_from(matrix, left_idx, update_gui, cells) {
     console.log(left_idx, max_area_to_this_col)
     return max_area_to_this_col
 }
-// k
 
 const draw = SVG().addTo('#output').size(800,800)
 const size = 15
@@ -168,7 +167,6 @@ const left_margin = 20
 const top_margin = 20
 
 function update_gui(left_idx, right_idx, intersections, cells) {
-    // console.log(intersections)
     for (let x = left_idx; x <= right_idx; x++) {
         for (let inter of intersections) {
             for (let y = inter[0]; y <= inter[1]; y++) {
@@ -209,12 +207,3 @@ print_matrix(matrix)
 let cells = draw_cells(matrix)
 
 console.log(maximal_rectangle(matrix, update_gui, cells))
-
-
-//let a = get_column(matrix, 0)
-//let b = get_column(matrix, 1)
-// let c = get_column(matrix, 2)
-//console.log(a.join(""))
-//console.log(b.join(""))
-// console.log(c)
-//console.log(get_intersections(get_col_sections(a), get_col_sections(b)))
