@@ -1,6 +1,6 @@
 import java.util
 
-class Leet0236 {
+class Leet0235 {
   def lowestCommonAncestor(root: TreeNode, p: TreeNode, q: TreeNode): TreeNode = {
 
     var history = new java.util.LinkedList[TreeNode]
@@ -32,9 +32,9 @@ class Leet0236 {
   }
 }
 
-object Leet0236 {
+object Leet0235 {
   def main(args: Array[String]): Unit = {
-    val leet = new Leet0236
+    val leet = new Leet0235
     val zero = new TreeNode(0, null, null)
     val three = new TreeNode(3, null, null)
     val five = new TreeNode(5, null, null)
