@@ -1,8 +1,9 @@
-import java.util
+// solves both 0235 and 0236
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
-class Leet0235 {
+class Leet02350236 {
   def lowestCommonAncestor(root: TreeNode, p: TreeNode, q: TreeNode): TreeNode = {
-
     var history = new java.util.LinkedList[TreeNode]
     def dfs(root: TreeNode, p: TreeNode): (Boolean, java.util.LinkedList[TreeNode]) = {
       history.add(root)
@@ -32,9 +33,9 @@ class Leet0235 {
   }
 }
 
-object Leet0235 {
+object Leet02350236 {
   def main(args: Array[String]): Unit = {
-    val leet = new Leet0235
+    val leet = new Leet02350236
     val zero = new TreeNode(0, null, null)
     val three = new TreeNode(3, null, null)
     val five = new TreeNode(5, null, null)
