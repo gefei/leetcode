@@ -62,7 +62,7 @@ class Leet {
 
   // brute force
   // extending from center
-  def leet0004_longestPalindrome(s: String): String = {
+  def leet0005_longestPalindrome(s: String): String = {
     if (s.length == 0) return ""
     var start = -1
     var end = -1
