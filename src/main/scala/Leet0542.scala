@@ -37,9 +37,7 @@ object Leet0542 {
   }
 
   def print2dArray(mat: Array[Array[Int]]): Unit = {
-    for (y <- mat.indices) {
-      println(mat(y).mkString(" "))
-    }
+    println(mat.map(row => row.mkString(" ")).mkString("\n"))
   }
 
   def main(args: Array[String]): Unit = {
