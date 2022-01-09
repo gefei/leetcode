@@ -18,10 +18,6 @@ class AllOne:
             else:
                 del self.count_2_key[c]
 
-        print()
-        print(self.key_2_count)
-        print(self.count_2_key)
-
     def dec(self, key: str) -> None:
         c = self.key_2_count.get(key)
         if c > 1:
@@ -35,10 +31,6 @@ class AllOne:
             self.count_2_key[c].remove(key)
         if len(self.count_2_key[c]) == 0:
            del self.count_2_key[c]
-
-        print()
-        print(self.key_2_count)
-        print(self.count_2_key)
 
     def getMaxKey(self) -> str:
         keys = self.count_2_key.keys()
