@@ -8,3 +8,5 @@ project
 build.sbt
 
 main.scala
+
+Pipfile
