@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class AllOne:
     def __init__(self):
         self.key_2_count: defaultdict[(str, int)] = defaultdict()
