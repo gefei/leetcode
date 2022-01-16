@@ -32,6 +32,7 @@ object Leet0091 {
     val leet0091 = new Leet0091()
     println(leet0091.numDecodings("12"))
     println(leet0091.numDecodings("226"))
+    println(leet0091.numDecodings("2261"))
   }
 }
 
