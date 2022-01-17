@@ -26,5 +26,11 @@
 
 0445: Stack
 
+0876: LinkedList, Two pointers
+
 1254: DFS
 1306: Graph, BFS
+
+1323: String. Teaching
+
+2095: LinkedList, Two pointers
