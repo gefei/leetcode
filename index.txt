@@ -20,11 +20,17 @@
 
 0329: Dijkstra
 
+0347, 0451: Teaching Map
+
 0365: BFS https://www.youtube.com/watch?v=BVtQNK_ZUJg
 
 0382: Singly linked list
 
 0445: Stack
+
+0470: Teaching Random
+
+0520: Teachign String
 
 0876: LinkedList, Two pointers
 
