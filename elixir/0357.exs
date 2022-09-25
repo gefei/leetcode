@@ -19,6 +19,7 @@ defmodule Solution do
 end
 
 IO.inspect(Solution.count_numbers_with_unique_digits(0))
+IO.inspect(Solution.count_numbers_with_unique_digits(1))
 IO.inspect(Solution.count_numbers_with_unique_digits(2))
 IO.inspect(Solution.count_numbers_with_unique_digits(3))
 IO.inspect(Solution.count_numbers_with_unique_digits(4))
