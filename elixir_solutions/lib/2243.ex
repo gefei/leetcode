@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution2243 do
   @spec digit_sum(s :: String.t, k :: integer) :: String.t
   def digit_sum(s, k) do
     cond do
@@ -21,12 +21,12 @@ defmodule Solution do
   def divide_inner(s, acc, k) do
      cond do
        String.length(s) <= k -> acc ++ [s]
-       true -> 
+       true ->
          {pre, sub} = String.split_at(s,k)
          divide_inner(sub, acc++[pre], k)
      end
   end
 end
 
-IO.inspect(Solution.digit_sum("00000000", 3))
-IO.inspect(Solution.digit_sum("11111222223",3))
+IO.inspect(Solution2243.digit_sum("00000000", 3))
+IO.inspect(Solution2243.digit_sum("11111222223",3))

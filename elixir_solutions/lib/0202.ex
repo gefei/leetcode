@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0202 do
  @spec is_happy(n :: integer) :: boolean
   def is_happy(n) do
     ls = f([n])
@@ -6,15 +6,15 @@ defmodule Solution do
     h === 1
   end
   def sum_sqr(n) do
-    digits = 
+    digits =
       n |> Integer.to_string
         |> String.graphemes
         |> Enum.map(&(String.to_integer(&1)))
     digits |> Enum.map(&((&1)*(&1)))
            |> Enum.sum
-  end 
+  end
   def f(x) do
-     Stream.unfold(x, fn 
+     Stream.unfold(x, fn
         [h|tail] -> {[sum_sqr(h)|[h|tail]], [sum_sqr(h)|[h|tail]]}
         end
      )
@@ -24,5 +24,5 @@ defmodule Solution do
   end
 end
 
-IO.inspect(Solution.is_happy(2))
-IO.inspect(Solution.is_happy(19))
+IO.inspect(Solution0202.is_happy(2))
+IO.inspect(Solution0202.is_happy(19))

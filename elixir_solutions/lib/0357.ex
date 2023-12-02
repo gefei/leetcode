@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0357 do
   def count_numbers_with_unique_digits(n) do
     cond do
       n == 0 -> 0
@@ -10,7 +10,7 @@ defmodule Solution do
   end
 
   def get_num([], mult, acc) do
-    acc 
+    acc
   end
 
   def get_num([h|t], mult, acc) do
@@ -18,8 +18,8 @@ defmodule Solution do
   end
 end
 
-IO.inspect(Solution.count_numbers_with_unique_digits(0))
-IO.inspect(Solution.count_numbers_with_unique_digits(1))
-IO.inspect(Solution.count_numbers_with_unique_digits(2))
-IO.inspect(Solution.count_numbers_with_unique_digits(3))
-IO.inspect(Solution.count_numbers_with_unique_digits(4))
+IO.inspect(Solution0357.count_numbers_with_unique_digits(0))
+IO.inspect(Solution0357.count_numbers_with_unique_digits(1))
+IO.inspect(Solution0357.count_numbers_with_unique_digits(2))
+IO.inspect(Solution0357.count_numbers_with_unique_digits(3))
+IO.inspect(Solution0357.count_numbers_with_unique_digits(4))

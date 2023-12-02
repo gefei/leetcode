@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution2251 do
   @spec repeated_character(s :: String.t) :: char
   def repeated_character(s) do
     {a, b} = String.to_charlist(s)
@@ -12,7 +12,7 @@ defmodule Solution do
 end
 
 
-x = Solution.repeated_character("abccbaacz")
+x = Solution2251.repeated_character("abccbaacz")
 IO.inspect(x)
-x = Solution.repeated_character("abcdd")
+x = Solution2251.repeated_character("abcdd")
 IO.inspect(x)

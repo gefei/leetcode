@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0009 do
   @spec is_palindrome(x :: integer) :: boolean
   def is_palindrome(x) do
     s = Integer.to_string(x)
@@ -7,5 +7,5 @@ defmodule Solution do
   end
 end
 
-x = Solution.is_palindrome(10)
+x = Solution0009.is_palindrome(10)
 IO.inspect x

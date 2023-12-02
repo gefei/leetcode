@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0014 do
   @spec longest_common_prefix(strs :: [String.t]) :: String.t
   def longest_common_prefix(strs) do
      x = min_length(strs)
@@ -22,7 +22,7 @@ end
 
 a = ["flower", "flow", "flight"]
 #a = ["dog", "racecar", "car"]
-x = Solution.longest_common_prefix(a)
+x = Solution0014.longest_common_prefix(a)
 
 
 IO.inspect x

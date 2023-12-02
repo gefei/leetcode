@@ -1,10 +1,10 @@
-defmodule Solution do
+defmodule Solution1945 do
   @spec get_lucky(s :: String.t, k :: integer) :: integer
   def get_lucky(s, k) do
       x = convert(s)
       transform(x, 0, k)
   end
- 
+
   def transform(x, k, k) do
       String.to_integer(x)
   end
@@ -32,6 +32,6 @@ defmodule Solution do
 
 end
 
-IO.inspect(Solution.get_lucky("zbax", 2))
-IO.inspect(Solution.get_lucky("iiii", 1))
-IO.inspect(Solution.get_lucky("leetcode", 2))
+IO.inspect(Solution1945.get_lucky("zbax", 2))
+IO.inspect(Solution1945.get_lucky("iiii", 1))
+IO.inspect(Solution1945.get_lucky("leetcode", 2))

@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0387 do
   @spec first_uniq_char(s :: String.t) :: integer
   def first_uniq_char(s) do
     res = String.to_charlist(s)
@@ -15,9 +15,9 @@ defmodule Solution do
 end
 
 
-x = Solution.first_uniq_char("leetcode")
+x = Solution0387.first_uniq_char("leetcode")
 IO.inspect(x)
-x = Solution.first_uniq_char("loveleetcode")
+x = Solution0387.first_uniq_char("loveleetcode")
 IO.inspect(x)
-x = Solution.first_uniq_char("aabb")
+x = Solution0387.first_uniq_char("aabb")
 IO.inspect(x)

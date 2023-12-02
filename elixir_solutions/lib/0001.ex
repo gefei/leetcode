@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0001 do
   @spec two_sum(nums :: [integer], target :: integer) :: [integer]
   def two_sum(nums, target) do
     r = Enum.with_index(nums)
@@ -25,9 +25,3 @@ defmodule Solution do
 end
 
 
-x = Solution.two_sum([2,7,11,15], 9)
-IO.inspect(x)
-x = Solution.two_sum([3,2,4], 6)
-IO.inspect(x)
-x = Solution.two_sum([3,3], 6)
-IO.inspect(x)

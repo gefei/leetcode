@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0049 do
   @spec group_anagrams(strs :: [String.t]) :: [[String.t]]
   def group_anagrams(strs) do
     groups = Enum.group_by(strs, fn n -> canonical(n) end)
@@ -10,9 +10,9 @@ defmodule Solution do
   end
 end
 
-x = Solution.group_anagrams(["eat", "tea", "ate", "nat", "bat"]) 
+x = Solution0049.group_anagrams(["eat", "tea", "ate", "nat", "bat"])
 IO.inspect x
-x = Solution.group_anagrams([""]) 
+x = Solution0049.group_anagrams([""])
 IO.inspect x
-x = Solution.group_anagrams(["a"]) 
+x = Solution0049.group_anagrams(["a"])
 IO.inspect x

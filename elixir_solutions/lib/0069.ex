@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0069 do
   @spec my_sqrt(x :: integer) :: integer
   def my_sqrt(x) do
     y = Stream.unfold(1, fn n -> {n, n + 1} end)
@@ -7,7 +7,7 @@ defmodule Solution do
   end
 end
 
-x = Solution.my_sqrt(8)
+x = Solution0069.my_sqrt(8)
 IO.inspect x
-x = Solution.my_sqrt(9)
+x = Solution0069.my_sqrt(9)
 IO.inspect x

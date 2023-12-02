@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0219 do
   @spec contains_nearby_duplicate(nums :: [integer], k :: integer) :: boolean
   def contains_nearby_duplicate(nums, k) do
     x =
@@ -27,13 +27,13 @@ defmodule Solution do
 end
 
 
-x = Solution.contains_nearby_duplicate([1], 2)
+x = Solution0219.contains_nearby_duplicate([1], 2)
 IO.inspect(x)
-x = Solution.contains_nearby_duplicate([1,2], 2)
+x = Solution0219.contains_nearby_duplicate([1,2], 2)
 IO.inspect(x)
-x = Solution.contains_nearby_duplicate([1,2,3,1], 3)
+x = Solution0219.contains_nearby_duplicate([1,2,3,1], 3)
 IO.inspect(x)
-x = Solution.contains_nearby_duplicate([1,0,1,1], 1)
+x = Solution0219.contains_nearby_duplicate([1,0,1,1], 1)
 IO.inspect(x)
-x = Solution.contains_nearby_duplicate([1,2,3,1,2,3], 2)
+x = Solution0219.contains_nearby_duplicate([1,2,3,1,2,3], 2)
 IO.inspect(x)

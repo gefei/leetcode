@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0258 do
   @spec add_digits(num :: integer) :: integer
   def add_digits(num) when num >= 10 do
     x = num |> Integer.to_string()
@@ -12,9 +12,9 @@ defmodule Solution do
   end
 end
 
-x = Solution.add_digits(38)
+x = Solution0258.add_digits(38)
 IO.inspect x
-x = Solution.add_digits(0)
+x = Solution0258.add_digits(0)
 IO.inspect x
-x = Solution.add_digits(492)
+x = Solution0258.add_digits(492)
 IO.inspect x

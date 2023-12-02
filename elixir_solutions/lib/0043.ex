@@ -1,12 +1,12 @@
-defmodule Solution do
+defmodule Solution0043 do
   @spec multiply(num1 :: String.t, num2 :: String.t) :: String.t
   def multiply(num1, num2) when num1 == "0" or num2 == "0" do
      "0"
   end
 
   def multiply(num1, num2) do
-     n1 = String.reverse(num1) 
-     n2 = String.reverse(num2) 
+     n1 = String.reverse(num1)
+     n2 = String.reverse(num2)
      n1_int = String.graphemes(n1) |> Stream.map(fn n -> String.to_integer(n) end)
      n2_int = String.graphemes(n2) |> Stream.map(fn n -> String.to_integer(n) end)
      res = times(n1_int, n2_int) |> post_process([])
@@ -26,7 +26,7 @@ defmodule Solution do
      Stream.cycle([0]) |> Enum.take(c)
   end
 
-  def time_one_digit(n1_int, n) do 
+  def time_one_digit(n1_int, n) do
     n1_int |> Stream.map(fn x -> x * n end) |> Enum.to_list
   end
 
@@ -54,11 +54,11 @@ defmodule Solution do
 
 end
 
-x = Solution.multiply("0", "5") 
+x = Solution0043.multiply("0", "5")
 IO.inspect x
-x = Solution.multiply("3", "0")
+x = Solution0043.multiply("3", "0")
 IO.inspect x
-x = Solution.multiply("32132940", "5") 
+x = Solution0043.multiply("32132940", "5")
 IO.inspect x
-x = Solution.multiply("123", "125") 
+x = Solution0043.multiply("123", "125")
 IO.inspect x

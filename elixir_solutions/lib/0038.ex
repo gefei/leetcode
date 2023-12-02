@@ -1,4 +1,4 @@
-defmodule Solution do
+defmodule Solution0038 do
   def count_and_say(1), do: "1"
   def count_and_say(n) do
     tail_count_and_say(1, n, "1")
