@@ -24,6 +24,7 @@ var myAtoi = function(s) {
                 c = s[pos]
             }
             return sign * sum
+        }
     }
 
     return process()
