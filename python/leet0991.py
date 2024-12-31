@@ -5,12 +5,11 @@ class Solution:
         c = target
         cnt = 0
         while c > startValue:
-            while c%2 == 0 and c > startValue:
+            if c%2 == 0:
                 c = c // 2
-                cnt += 1
-            if c > startValue:
+            else:
                 c += 1
-                cnt += 1
+            cnt += 1
         return cnt + startValue - c
 
 s = Solution()
