@@ -8,8 +8,6 @@
 (define/contract (is-valid-bst root)
   (-> (or/c tree-node? #f) boolean?)
   (define (rec root lo hi parent)
-      ;(println (list lo hi))
-      ;(println (list root lo hi parent))
       (cond
           [(not root) #t]
           [(<= (tree-node-val root) lo) #f]
@@ -17,15 +15,10 @@
           [else 
               (and
                (rec (tree-node-left root) lo (min (tree-node-val root) hi) root)
-               (rec (tree-node-right root) (max (tree-node-val root) lo) hi root)
-              )
-          ]
-      )
-  )
+               (rec (tree-node-right root) (max (tree-node-val root) lo) hi root))]))
   (rec root (- (- (expt 2 31)) 1) (expt 2 31) #f)
 )
 
-;(define x (make-tree-node 1)) 
 (define x 
      (tree-node 2 
      (make-tree-node 1) (make-tree-node 3))) 
