@@ -28,7 +28,7 @@
                     [r (rec (substring digits 1) acc)])
                     (string-append (make-string 1 c) r))]
   ))
-  (rec digits (list " "))
+  (rec digits (list))
 )
 
 
