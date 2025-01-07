@@ -30,9 +30,8 @@ var countBattleships = function(board) {
         const queue = [[x, y]]
         while (queue.length !== 0) {
             let [nx, ny] = queue.shift()
-            if (!has(visited, nx, ny)) {
-                add(visited, nx, ny)
-            }
+            if (has(visited, nx, ny)) continue
+            add(visited, nx, ny)
             for ([px, py] of get_neighbors(nx, ny)) {
                 if (!has(visited, px, py)) {
                     queue.push([px, py])
