@@ -45,9 +45,3 @@ var queryResults = function(limit, queries) {
     }
     return res
 };
-console.log(queryResults(2, [[0,1],[1,1],[2,4],[0,4],[1,2]]))
-console.log(queryResults(1, [[0,1],[1,4],[1,1],[1,4],[1,1]]))
-console.log(queryResults(1, [[0,1],[0,4],[0,4],[0,1],[1,2]]))
-console.log(queryResults(4, [[0,1],[0,4],[1,2],[1,5],[1,4]]))
-console.log(queryResults(4,  [[1,4],[2,5],[1,3],[3,4]]))
-console.log(queryResults(4,  [[0,1],[1,2],[2,2],[3,4],[4,5]]))
