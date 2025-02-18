@@ -27,6 +27,6 @@ defmodule Solution do
     rec(l, num_to_str(v) <> path, acc)
   end
   def rec(%TreeNode{val: v, left: l, right: r}, path, acc) do
-    rec(r, num_to_str(v) <> path, rec(l, num_to_str(v), acc))
+    rec(r, num_to_str(v) <> path, rec(l, num_to_str(v) <> path, acc))
   end
 end
