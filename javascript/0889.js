@@ -20,31 +20,3 @@ function subtree(preorder, postorder, lo, hi) {
                     subtree(preorder, postorder, idx_right_in_pre, hi),
     )
 }
-
-let a = [1,2,4,5,3,6,7]
-let b = [4,5,2,6,7,3,1]
-let res = []
-let x = constructFromPrePost(a, b)
-pre_o(x, res)
-console.log(res)
-res = []
-post_o(x, res)
-console.log(res)
-
-
-function pre_o(root, a) {
-    if (root) {
-        a.push(root.val)
-        pre_o(root.left, a)
-        pre_o(root.right, a)
-    }
-}
-
-function post_o(root, a) {
-    if (root) {
-        post_o(root.left, a)
-        post_o(root.right, a)
-        a.push(root.val)
-    }
-}
-
