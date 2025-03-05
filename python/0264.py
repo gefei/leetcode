@@ -13,7 +13,3 @@ class Solution:
                 s.add(c)
             cnt += 1
         return t
-
-s = Solution()
-print(s.nthUglyNumber(10))
-print(s.nthUglyNumber(1))
