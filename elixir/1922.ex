@@ -16,4 +16,23 @@ defmodule Solution do
     y = pow(n, div(k,2))
     rem(y * y * n, 1000000007)
   end
+
+  def p(_n, 0, acc), do: acc
+  def p(n, 1, acc), do: acc * n
+  def p(n, k, acc) when rem(k, 2) == 0 do
+    p(n*n, div(k,2), acc)
+  end
+  def p(n, k, acc) when rem(k, 2) == 1 do
+    p(n*n, div(k,2), acc*n)
+  end
 end
+
+Solution.count_good_numbers(1) |> IO.inspect()
+Solution.count_good_numbers(4) |> IO.inspect()
+Solution.count_good_numbers(50) |> IO.inspect()
+Solution.count_good_numbers(806166225460393) |> IO.inspect()
+
+Solution.p(2,5,1) |> IO.inspect()
+Solution.p(2,6,1) |> IO.inspect()
+Solution.p(2,7,1) |> IO.inspect()
+Solution.p(2,8,1) |> IO.inspect()
