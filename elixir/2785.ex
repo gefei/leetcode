@@ -5,8 +5,6 @@ defmodule Solution do
     vowels = lst |> Enum.filter(&(is_vowel(&1))) |> Enum.sort()
     groups = lst |> Enum.chunk_by(&(is_vowel(&1)))
     rec(groups, vowels, "")
-    # |> Enum.reverse()
-    #|> Enum.join()
   end
 
   def rec([], _, acc), do: acc
