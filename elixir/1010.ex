@@ -12,6 +12,3 @@ defmodule Solution do
     end)
   end
 end
-
-Solution.num_pairs_divisible_by60([30,20,150,100,40]) |> IO.inspect()
-Solution.num_pairs_divisible_by60([60,60,60]) |> IO.inspect()
