@@ -29,13 +29,11 @@ defmodule Solution do
   def map(i, n, m) do
     this_one = loop(0, i, m, 0)
     new_m = Map.put(m, i, this_one)
-    {:old, m, :new, new_m}
     map(i+1, n, new_m)
   end
 
   def loop(cur, i, map, acc) do
     k = i - cur - 1
-    {:i, i, :cur, cur, :k, k, :acc, acc}
     cond do
       cur > k -> acc
       cur == k -> Map.get(map, k) * Map.get(map, cur) + acc
@@ -43,8 +41,3 @@ defmodule Solution do
     end
   end
 end
-
-Solution.num_trees(3) |> IO.inspect()
-Solution.num_trees(4) |> IO.inspect()
-Solution.num_trees(5) |> IO.inspect()
-Solution.num_trees(6) |> IO.inspect()
