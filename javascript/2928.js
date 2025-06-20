@@ -20,6 +20,3 @@ var distributeCandies = function(n, limit) {
     }
     return a[a.length-1]
 };
-
-console.log(distributeCandies(5, 2))
-console.log(distributeCandies(3, 3))
