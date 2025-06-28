@@ -25,7 +25,3 @@ function rec(d, prefix) {
     }
     return prefix + mx + d.substr(1, j-1) + d[0] + d.substr(j+1)
 }
-
-console.log(maximumSwap(2736))
-console.log(maximumSwap(9973))
-console.log(maximumSwap(98368))
