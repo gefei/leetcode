@@ -5,7 +5,6 @@ defmodule Solution do
     head = nums |> Enum.filter(&(&1 < h))
     tail = nums |> Enum.filter(&(&1 >= h))
     len = length(tail)
-    #IO.inspect({:head, head, :tail, tail})
     cond do
       Enum.all?(nums, &(&1==h)) -> h
       length(nums) == 1 -> hd nums
