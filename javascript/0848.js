@@ -7,7 +7,6 @@ var shiftingLetters = function(s, shifts) {
         sum = (sum + shifts[i]) % 26
         prefix[i] = sum
     }
-    console.log(prefix)
     let res = ''
     for (let i = 0; i < shifts.length; i++) {
         const y = s.charCodeAt(i)
