@@ -8,7 +8,3 @@ defmodule Solution do
       |> then(fn {a,_b} -> a end)
   end
 end
-
-Solution.find_lucky([2,2,3,4]) |> IO.inspect()
-Solution.find_lucky([1,2,2,3,3,3]) |> IO.inspect()
-Solution.find_lucky([2,2,2,3,3]) |> IO.inspect()
