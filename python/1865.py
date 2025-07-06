@@ -3,7 +3,6 @@ class FindSumPairs:
     def __init__(self, nums1: list[int], nums2: list[int]):
         self.nums1 = nums1
         self.nums2 = nums2
-        self.keys1 = sorted([x for x in set(self.nums1)])
         self.map1  = Counter(self.nums1)
         
         self.map2 = dict()

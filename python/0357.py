@@ -1,15 +1,10 @@
 class Solution:
     def countNumbersWithUniqueDigits(self, n: int) -> int:
-        return self.countSpecialNumbers(10**n - 1) + 1
-
-    def countSpecialNumbers(self, n: int) -> int:
-        num_s = str(n)
         res = 0
-        num_digits = len(num_s)
-        for i in range(1, num_digits):
+        for i in range(1, n+1):
             res = res + self.get_n(i, set())
-        return res + self.partial(num_s, set())
-    
+        return res + 1
+
     def get_n(self, num_d: int, ex: set) -> int:
         excluded = len(ex)
         res = 9 if excluded == 0 else 10 - excluded
