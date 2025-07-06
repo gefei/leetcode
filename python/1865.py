@@ -19,7 +19,6 @@ class FindSumPairs:
         new_c = self.map2.get(new, 0)
         self.nums2[index] = new
         self.map2[new] = new_c+1
-        print(self.map2)
         
     def count(self, tot: int) -> int:
         res = 0
