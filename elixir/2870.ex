@@ -15,7 +15,3 @@ defmodule Solution do
     end
   end
 end
-
-Solution.min_operations([2,3,3,2,2,4,2,3,4]) |> IO.inspect()
-Solution.min_operations([2,1,2,2,3,3]) |> IO.inspect()
-Solution.min_operations([14,12,14,14,12,14,14,12,12,12,12,14,14,12,14,14,14,12,12]) |> IO.inspect()
