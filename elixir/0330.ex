@@ -1,7 +1,7 @@
 defmodule Solution do
   @spec min_patches(nums :: [integer], n :: integer) :: integer
   def min_patches(nums, n) do
-    min_patches(nums, n, 0, [])
+    length(min_patches(nums, n, 0, []))
   end
 
   def min_patches(_nums, n, cur, acc) when cur >= n, do: acc
