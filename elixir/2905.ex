@@ -52,11 +52,4 @@ defmodule Solution do
       true -> max_from_right(t, my_idx-1, [{my_idx, {v_acc, idx_acc}}|acc])
     end
   end
-
 end
-
-#Solution.find_indices([5,1,4,1], 2, 4) |> IO.inspect(charlists: :as_list)
-#Solution.find_indices([2,1], 0, 0) |> IO.inspect(charlists: :as_list)
-#Solution.find_indices([1,2,3], 2, 4) |> IO.inspect(charlists: :as_list)
-#Solution.find_indices([5,12], 0, 10) |> IO.inspect(charlists: :as_list)
-Solution.find_indices([3,12,40], 0, 9) |> IO.inspect(charlists: :as_list)
