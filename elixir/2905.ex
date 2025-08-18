@@ -23,10 +23,8 @@ defmodule Solution do
     cond do
       cur_idx + i_d >= len -> [-1, -1]
       true ->
-        mn |> IO.inspect()
         {x, idx} = Map.get(mn, cur_idx+i_d)
         diff = h-x
-        {mn, x, idx, diff}|> IO.inspect()
         d = if diff > 0 do diff else -diff end
         cond do
           -v_d >= -d || v_d <= d -> [cur_idx, idx]
