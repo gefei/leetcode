@@ -10,8 +10,8 @@ defmodule Solution do
   def find_indices(nums, index_difference, value_difference) do
     len = length(nums)
     [h|t] = Enum.reverse(nums)
-    mn = min_from_right(t, len-2, [{len-1, {h, len-1}}]) |> Map.new()
-    mx = max_from_right(t, len-2, [{len-1, {h, len-1}}]) |> Map.new()
+    mn = right(t, fn a,b -> a < b end, len-2, [{len-1, {h, len-1}}]) |> Map.new()
+    mx = right(t, fn a,b -> a > b end, len-2, [{len-1, {h, len-1}}]) |> Map.new()
     case find(nums, mn, 0, index_difference, value_difference, length(nums)) do
       [-1, -1] -> find(nums, mx, 0, index_difference, value_difference, length(nums))
       a -> a
@@ -33,21 +33,12 @@ defmodule Solution do
     end
   end
 
-  def min_from_right([], _my_idx, acc), do: acc
-  def min_from_right([h|t], my_idx, acc) do
+  def right([], _f, _my_idx, acc), do: acc
+  def right([h|t], f, my_idx, acc) do
     {_, {v_acc, idx_acc}} = hd acc
     cond do
-      h < v_acc-> min_from_right(t, my_idx-1, [{my_idx, {h,my_idx}}|acc])
-      true -> min_from_right(t, my_idx-1, [{my_idx, {v_acc, idx_acc}}|acc])
-    end
-  end
-
-  def max_from_right([], _my_idx, acc), do: acc
-  def max_from_right([h|t], my_idx, acc) do
-    {_, {v_acc, idx_acc}} = hd acc
-    cond do
-      h > v_acc-> max_from_right(t, my_idx-1, [{my_idx, {h,my_idx}}|acc])
-      true -> max_from_right(t, my_idx-1, [{my_idx, {v_acc, idx_acc}}|acc])
+      f.(h, v_acc)-> right(t, f, my_idx-1, [{my_idx, {h,my_idx}}|acc])
+      true -> right(t, f, my_idx-1, [{my_idx, {v_acc, idx_acc}}|acc])
     end
   end
 end
