@@ -8,7 +8,6 @@ var getKth = function(lo, hi, k) {
         ({n: n1, p: p1}, {n: n2, p: p2}) => {
             return p1-p2 + ((p2===p1)?(n1-n2):0)
         })
-    console.log(res)
     return res[k-1].n
 };
 
