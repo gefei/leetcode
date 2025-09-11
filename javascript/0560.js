@@ -10,6 +10,3 @@ var subarraySum = function(nums, k) {
     }
     return cnt
 };
-
-console.log(subarraySum([1,1,1], 2))
-console.log(subarraySum([1,2,3], 3))
