@@ -11,11 +11,3 @@ var substringXorQueries = function(s, queries) {
     }
     return queries.map(([x, y]) => find_substring(s, x, y))
 };
-
-s = "101101"
-queries = [[0,5],[1,2]]
-console.log(substringXorQueries(s, queries))
-s = "0101"
-queries = [[12,8]]
-console.log(substringXorQueries(s, queries))
-console.log(substringXorQueries("1", [[4,5]]))
