@@ -7,7 +7,6 @@ defmodule Solution do
   def step(nums, [], [], acc), do: acc |> Enum.reverse()
   def step(nums, [a|t1], [b|t2], acc) do
     [a,b|t] = slice = nums |> Enum.drop(a) |> Enum.take(b-a+1) |> Enum.sort()
-    slice |> IO.inspect(charlists: :as_list)
     step(nums, t1, t2, [is_arithmetic(slice, b-a) | acc])
   end
 
