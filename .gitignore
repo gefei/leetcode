@@ -1,5 +1,8 @@
+
 .bsp/
 .scala-build/
+
+*.class
 
 *.swp
 
