@@ -25,3 +25,5 @@ __*.*
 # rust
 Cargo.*
 main.rs
+
+materials.txt
