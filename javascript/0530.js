@@ -36,27 +36,3 @@ var getMinimumDifference = function(root) {
     }
     return res
 };
-
-// let one = new TreeNode(1)
-// let three = new TreeNode(3)
-// let two = new TreeNode(2, one, three)
-// let six = new TreeNode(6)
-// let four = new TreeNode(4, two, six)
-// 
-// console.log(getMinimumDifference(four))
-
-let t = new TreeNode(2,
-    new TreeNode(1)
-)
-t = new TreeNode(
-        543,
-        //new TreeNode(384,
-        //    null,
-        //    new TreeNode(445)
-        //),
-        null,
-        new TreeNode(652, null,
-            new TreeNode(699)
-        )
-    )
-console.log(getMinimumDifference(t))
